@@ -215,7 +215,7 @@ end
 local function requestPassword()
 	if not _G.OSSettings.protectionMethod then
 		while true do
-			local data = ecs.universalWindow("auto", "auto", 30, ecs.windowColors.background, true, {"EmptyLine"}, {"CenterText", 0x000000, "Защитите ваш комьютер!"}, {"EmptyLine"}, {"Input", 0x262626, 0x880000, "Пароль"}, {"Input", 0x262626, 0x880000, "Подтвердить пароль"}, {"EmptyLine"}, {"Button", {0xbbbbbb, 0xffffff, "OK"}, {0x999999, 0xffffff, "Без защиты"}})
+			local data = ecs.universalWindow("auto", "auto", 30, ecs.windowColors.background, true, {"EmptyLine"}, {"CenterText", 0x000000, "Zashititye vash computers!"}, {"EmptyLine"}, {"Input", 0x262626, 0x880000, "Password"}, {"Input", 0x262626, 0x880000, "Confirm password"}, {"EmptyLine"}, {"Button", {0xbbbbbb, 0xffffff, "OK"}, {0x999999, 0xffffff, "Without protection"}})
 			if data[3] == "OK" then
 				if data[1] == data[2] then
 
@@ -227,7 +227,7 @@ local function requestPassword()
 				end
 			else
 				_G.OSSettings.protectionMethod = "withoutProtection"
-				break
+				break																																																																													
 			end
 		end
 		ecs.saveOSSettings()
@@ -252,7 +252,7 @@ local function login()
 		if success then
 			break
 		else
-			pcall(ecs.error, "Самый умный что ли?")
+			pcall(ecs.error, "The smartest what?")
 		end
 	end
 end
